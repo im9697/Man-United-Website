@@ -6,15 +6,144 @@
          background-image: linear-gradient(rgb(255, 0, 0), rgb(238, 227, 0 ));
          min-width: 100%;
          min-height: 100%;
-      }
+     }
+
+     /* Style the button */
+     #backToTopBtn {
+         position: fixed;
+         bottom: 20px;
+         right: 20px;
+         background-color: #007bff;
+         color: white;
+         border: none;
+         border-radius: 5px;
+         padding: 10px;
+         font-size: 18px;
+         cursor: pointer;
+         display: none; /* Hidden by default */
+     }
+
+     /* Add a hover effect */
+     #backToTopBtn:hover {
+         background-color: #0056b3;
+     }
+     
+     .bn5 {
+  padding: 0.6em 2em;
+  border: none;
+  outline: none;
+  color: rgb(255, 255, 255);
+  background: #111;
+  cursor: pointer;
+  position: relative;
+  z-index: 0;
+  border-radius: 10px;
+}
+
+.bn5:before {
+  content: "";
+  background: linear-gradient(
+    45deg,
+    #ff0000,
+    #ff7300,
+    #fffb00,
+    #48ff00,
+    #00ffd5,
+    #002bff,
+    #7a00ff,
+    #ff00c8,
+    #ff0000
+  );
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  background-size: 400%;
+  z-index: -1;
+  filter: blur(5px);
+  width: calc(100% + 4px);
+  height: calc(100% + 4px);
+  animation: glowingbn5 20s linear infinite;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+  border-radius: 10px;
+}
+
+@keyframes glowingbn5 {
+  0% {
+    background-position: 0 0;
+  }
+  50% {
+    background-position: 400% 0;
+  }
+  100% {
+    background-position: 0 0;
+  }
+}
+
+.bn5:active {
+  color: #000;
+}
+
+.bn5:active:after {
+  background: transparent;
+}
+
+.bn5:hover:before {
+  opacity: 1;
+}
+
+.bn5:after {
+  z-index: -1;
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: #191919;
+  left: 0;
+  top: 0;
+  border-radius: 10px;
+}
+     
   </style>
 </head>
 
 <body>
-<h1>Man United , the best football club of all time .</h1>
-<img src="av2rv3x5i-removebg-preview.png">
+<h1>Man United, the best football club of all time.</h1>
+<br>
+<a href="/" class="bn5">Hover</a>
+<br><br><br><br>
 
 
-</body>
+
+
+
+<!-- Embed YouTube video -->
 <iframe width="560" height="315" src="https://www.youtube.com/embed/3y6n4ZloSYk?si=eTtoP6DaEgTX263m" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+<!-- Back to Top Button -->
+<button onclick="topFunction()" id="backToTopBtn" title="Go to top">↑</button>
+
+<script>
+    // Get the button
+    let mybutton = document.getElementById("backToTopBtn");
+
+    // When the user scrolls down 100px from the top of the document, show the button
+    window.onscroll = function() {
+        if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+            mybutton.style.display = "block";
+        } else {
+            mybutton.style.display = "none";
+        }
+    };
+
+    // When the user clicks on the button, scroll to the top of the document
+    function topFunction() {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+</script>
+
+
+
+
+
 </html>
