@@ -20,18 +20,39 @@
       justify-content: start;
     }
 
-    /* Heading */
-    h1 {
-      margin-top: 20px;
-      font-size: 3rem;
+    /* Header Section */
+    header {
+      padding: 20px;
+      width: 100%;
+      background: rgba(0, 0, 0, 0.8);
+      color: #fff;
+      text-align: center;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+      position: fixed;
+      top: 0;
+      z-index: 1000;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 2.5rem;
       text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.3);
+    }
+
+    /* Main Content */
+    main {
+      margin-top: 100px;
+      padding: 20px;
+      text-align: center;
+      width: 100%;
+      max-width: 1200px;
     }
 
     /* Paragraph Styling */
     p {
       margin: 20px auto;
       font-size: 1.2rem;
-      line-height: 1.6;
+      line-height: 1.8;
       max-width: 800px;
       text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
     }
@@ -108,6 +129,17 @@
       max-width: 560px;
     }
 
+    /* Footer */
+    footer {
+      margin-top: auto;
+      padding: 10px 20px;
+      width: 100%;
+      background: rgba(0, 0, 0, 0.9);
+      color: #fff;
+      text-align: center;
+      font-size: 0.9rem;
+    }
+
     /* Back to Top Button */
     #backToTopBtn {
       position: fixed;
@@ -132,25 +164,27 @@
   </style>
 </head>
 <body>
-  <h1>Manchester United: The Best Football Club of All Time</h1>
+  <header>
+    <h1>Manchester United: The Best Football Club</h1>
+  </header>
   
-  <!-- Paragraph -->
-  <p>
-    Manchester United, famously known as the "Red Devils," is one of the most celebrated football clubs in history. With a legacy spanning over a century, the club has secured numerous prestigious titles, including 20 English league championships and three UEFA Champions League victories. Old Trafford, the iconic "Theatre of Dreams," has witnessed the rise of football legends like George Best, Eric Cantona, and Cristiano Ronaldo. Known for its attacking flair, youth development, and never-say-die spirit, Manchester United remains a symbol of passion and excellence for millions of fans worldwide.
-  </p>
-  
-  <!-- Logo -->
-  <img src="man_united_logo.png" alt="Manchester United Logo">
+  <main>
+    <p>
+      Manchester United, famously known as the "Red Devils," is one of the most celebrated football clubs in history. With a legacy spanning over a century, the club has secured numerous prestigious titles, including 20 English league championships and three UEFA Champions League victories. Old Trafford, the iconic "Theatre of Dreams," has witnessed the rise of football legends like George Best, Eric Cantona, and Cristiano Ronaldo. Known for its attacking flair, youth development, and never-say-die spirit, Manchester United remains a symbol of passion and excellence for millions of fans worldwide.
+    </p>
+    <img src="man_united_logo.png" alt="Manchester United Logo">
 
-  <!-- Glowing Button -->
-  <a href="/" class="bn5">Explore More</a>
+    <a href="/" class="bn5">Explore More</a>
 
-  <!-- Embed YouTube Video -->
-  <iframe width="560" height="315" src="https://www.youtube.com/embed/3y6n4ZloSYk" 
-    title="Manchester United Highlights" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
-  </iframe>
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/3y6n4ZloSYk" 
+      title="Manchester United Highlights" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
+    </iframe>
+  </main>
 
-  <!-- Back to Top Button -->
+  <footer>
+    <p>Thank you for looking at this website go above if you want to feedback :)</p>
+  </footer>
+
   <button onclick="topFunction()" id="backToTopBtn" title="Go to top">↑</button>
 
   <script>
