@@ -3,208 +3,205 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Manchester United | Red Devils Fan Hub</title>
+  <title>Manchester United Fan Page</title>
   <style>
-    /* General Reset */
-    * {
+    /* Body Styling */
+    body {
       margin: 0;
       padding: 0;
-      box-sizing: border-box;
+      font-family: Arial, sans-serif;
+      text-align: center;
+      background: linear-gradient(135deg, #ff0000, #ffe600);
+      color: #fff;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: start;
     }
 
-    body {
-      font-family: 'Arial', sans-serif;
-      background: linear-gradient(to bottom, #ff0000, #1b1b1b);
+    /* Header Section */
+    header {
+      padding: 20px;
+      width: 100%;
+      background: rgba(0, 0, 0, 0.8);
       color: #fff;
       text-align: center;
-      overflow-x: hidden;
-    }
-
-    /* Header Styling */
-    header {
-      background: rgba(0, 0, 0, 0.8);
-      padding: 20px;
-      position: sticky;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+      position: fixed;
       top: 0;
       z-index: 1000;
-      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
     }
 
     header h1 {
+      margin: 0;
       font-size: 2.5rem;
-      text-shadow: 3px 3px 5px rgba(255, 0, 0, 0.6);
-      color: #ffe600;
-    }
-
-    nav {
-      margin-top: 10px;
-    }
-
-    nav a {
-      color: #fff;
-      text-decoration: none;
-      font-size: 1rem;
-      margin: 0 15px;
-      transition: color 0.3s ease-in-out;
-    }
-
-    nav a:hover {
-      color: #ff7300;
-    }
-
-    /* Hero Section */
-    .hero {
-      position: relative;
-      background: url('https://wallpapercave.com/wp/wp2163832.jpg') no-repeat center center/cover;
-      height: 60vh;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      color: #fff;
-      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
-    }
-
-    .hero h2 {
-      font-size: 3rem;
-      margin: 0 20px;
-      max-width: 90%;
+      text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.3);
     }
 
     /* Main Content */
     main {
-      padding: 40px 20px;
+      margin-top: 100px;
+      padding: 20px;
+      text-align: center;
+      width: 100%;
       max-width: 1200px;
-      margin: 0 auto;
-      text-align: left;
     }
 
-    section {
-      margin-bottom: 50px;
-    }
-
-    section h3 {
-      font-size: 2rem;
-      margin-bottom: 20px;
-      color: #ffe600;
-    }
-
-    section p {
+    /* Paragraph Styling */
+    p {
+      margin: 20px auto;
       font-size: 1.2rem;
       line-height: 1.8;
+      max-width: 800px;
+      text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
     }
 
-    /* Gallery */
-    .gallery {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-      gap: 20px;
-    }
-
-    .gallery img {
-      width: 100%;
+    /* Logo Styling */
+    img {
+      margin: 20px auto;
       border-radius: 10px;
       box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+      width: 200px;
+      height: auto;
     }
 
-    /* YouTube Section */
-    .video {
-      margin-top: 30px;
+    /* Buttons */
+    .bn5 {
+      padding: 0.8em 2.5em;
+      border: none;
+      color: #fff;
+      background: #111;
+      cursor: pointer;
+      position: relative;
+      z-index: 0;
+      border-radius: 10px;
+      font-size: 1rem;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      transition: transform 0.3s, box-shadow 0.3s;
     }
 
+    .bn5:before {
+      content: "";
+      background: linear-gradient(45deg, #ff0000, #ff7300, #ffe600, #48ff00, #00ffd5, #002bff, #7a00ff, #ff00c8, #ff0000);
+      position: absolute;
+      top: -2px;
+      left: -2px;
+      background-size: 400%;
+      z-index: -1;
+      filter: blur(8px);
+      width: calc(100% + 4px);
+      height: calc(100% + 4px);
+      animation: glowing 20s linear infinite;
+      opacity: 0;
+      transition: opacity 0.3s ease-in-out;
+      border-radius: 10px;
+    }
+
+    @keyframes glowing {
+      0% {
+        background-position: 0 0;
+      }
+      50% {
+        background-position: 400% 0;
+      }
+      100% {
+        background-position: 0 0;
+      }
+    }
+
+    .bn5:hover:before {
+      opacity: 1;
+    }
+
+    .bn5:hover {
+      transform: scale(1.1);
+    }
+
+    /* YouTube Video */
     iframe {
+      margin: 30px 0;
       border: none;
       border-radius: 15px;
       box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
-      width: 100%;
+      width: 90%;
       max-width: 560px;
-      height: 315px;
     }
 
     /* Footer */
     footer {
+      margin-top: auto;
+      padding: 10px 20px;
+      width: 100%;
       background: rgba(0, 0, 0, 0.9);
       color: #fff;
-      padding: 20px 10px;
-      font-size: 0.9rem;
       text-align: center;
-      position: relative;
+      font-size: 0.9rem;
     }
 
-    footer a {
-      color: #ff7300;
-      text-decoration: none;
+    /* Back to Top Button */
+    #backToTopBtn {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background: linear-gradient(135deg, #007bff, #0056b3);
+      color: white;
+      border: none;
+      border-radius: 50%;
+      padding: 15px;
+      font-size: 18px;
+      cursor: pointer;
+      display: none; /* Hidden by default */
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+      transition: transform 0.3s, background-color 0.3s;
     }
 
-    footer a:hover {
-      text-decoration: underline;
+    #backToTopBtn:hover {
+      background-color: #004c99;
+      transform: scale(1.2);
     }
   </style>
 </head>
 <body>
-  <!-- Header -->
   <header>
-    <h1>Manchester United Fan Hub</h1>
-    <nav>
-      <a href="#about">About</a>
-      <a href="#history">History</a>
-      <a href="#gallery">Gallery</a>
-      <a href="#video">Highlights</a>
-    </nav>
+    <h1>Manchester United: The Best Football Club</h1>
   </header>
-
-  <!-- Hero Section -->
-  <div class="hero">
-    <h2>Welcome to the Home of the Red Devils!</h2>
-  </div>
-
-  <!-- Main Content -->
+  
   <main>
-    <!-- About Section -->
-    <section id="about">
-      <h3>About Manchester United</h3>
-      <p>
-        Manchester United, famously known as the "Red Devils," is a football club with a rich history and passionate global fanbase. Established in 1878, the club has captured hearts with its thrilling attacking style, unforgettable comebacks, and legendary players like George Best, Eric Cantona, and Cristiano Ronaldo.
-      </p>
-    </section>
+    <p>
+      Manchester United, famously known as the "Red Devils," is one of the most celebrated football clubs in history. With a legacy spanning over a century, the club has secured numerous prestigious titles, including 20 English league championships and three UEFA Champions League victories. Old Trafford, the iconic "Theatre of Dreams," has witnessed the rise of football legends like George Best, Eric Cantona, and Cristiano Ronaldo. Known for its attacking flair, youth development, and never-say-die spirit, Manchester United remains a symbol of passion and excellence for millions of fans worldwide.
+    </p>
+    <img src="man_united_logo.png" alt="Manchester United Logo">
 
-    <!-- History Section -->
-    <section id="history">
-      <h3>Historical Achievements</h3>
-      <p>
-        With 20 English league titles, 12 FA Cups, and 3 UEFA Champions League trophies, Manchester United is one of the most successful clubs in football history. Under legendary managers like Sir Matt Busby and Sir Alex Ferguson, the team became a global powerhouse.
-      </p>
-    </section>
+    <a href="/" class="bn5">Feedback</a>
 
-    <!-- Gallery Section -->
-    <section id="gallery">
-      <h3>Club Gallery</h3>
-      <div class="gallery">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/7a/Manchester_United_trophies.jpg/800px-Manchester_United_trophies.jpg" alt="Trophies">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/e/ee/Old_Trafford_inside.jpg" alt="Old Trafford">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/8/87/Alex_Ferguson_%28cropped%29.jpg" alt="Sir Alex Ferguson">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/a/a9/Man_United_Celebrating_Champions_League.jpg" alt="Champions League Victory">
-      </div>
-    </section>
-
-    <!-- Video Section -->
-    <section id="video">
-      <h3>Highlights</h3>
-      <div class="video">
-        <iframe src="https://www.youtube.com/embed/3y6n4ZloSYk" 
-          title="Manchester United Highlights" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
-        </iframe>
-      </div>
-    </section>
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/3y6n4ZloSYk" 
+      title="Manchester United Highlights" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
+    </iframe>
   </main>
 
-  <!-- Footer -->
   <footer>
-    <p>
-      © 2024 Manchester United Fan Hub. All rights reserved. Follow us on 
-      <a href="https://www.facebook.com/manchesterunited">Facebook</a>, 
-      <a href="https://twitter.com/ManUtd">Twitter</a>, and 
-      <a href="https://www.instagram.com/manchesterunited/">Instagram</a>.
-    </p>
+    <p>Thank you for looking at this website! If you want to feedback press the "feedback" button if you want to rate the website and feedback :)</p>
   </footer>
+
+  <button onclick="topFunction()" id="backToTopBtn" title="Go to top">↑</button>
+
+  <script>
+    // Back to Top Button
+    let backToTopBtn = document.getElementById("backToTopBtn");
+
+    window.onscroll = function () {
+      if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+        backToTopBtn.style.display = "block";
+      } else {
+        backToTopBtn.style.display = "none";
+      }
+    };
+
+    function topFunction() {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+  </script>
 </body>
 </html>
