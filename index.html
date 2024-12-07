@@ -18,6 +18,7 @@
       background: linear-gradient(135deg, #ff0000, #ffe600);
       color: #fff;
       overflow-x: hidden;
+      scroll-behavior: smooth; /* Smooth scrolling */
     }
 
     /* Glow Effect */
@@ -49,6 +50,38 @@
 
     nav a:hover {
       color: #ffe600;
+    }
+
+    /* Buttons for Scrolling */
+    .scroll-btn {
+      position: fixed;
+      right: 20px;
+      width: 50px;
+      height: 50px;
+      background: #111;
+      color: #fff;
+      border: none;
+      border-radius: 50%;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+      font-size: 20px;
+      text-align: center;
+      line-height: 50px;
+      cursor: pointer;
+      transition: background 0.3s, transform 0.3s;
+      z-index: 1000;
+    }
+
+    .scroll-btn:hover {
+      background: #ff7300;
+      transform: scale(1.1);
+    }
+
+    .scroll-top {
+      bottom: 80px;
+    }
+
+    .scroll-bottom {
+      bottom: 20px;
     }
 
     /* Hero Section */
@@ -98,32 +131,6 @@
       max-width: 800px;
       margin: 0 auto 20px;
       text-shadow: 0 0 5px #ffe600, 0 0 10px #ffe600;
-    }
-
-    /* Video Styling */
-    iframe {
-      border: none;
-      border-radius: 10px;
-      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
-      width: 90%;
-      max-width: 560px;
-    }
-
-    /* Buttons */
-    .btn {
-      display: inline-block;
-      padding: 10px 20px;
-      background: #111;
-      color: #fff;
-      text-decoration: none;
-      border-radius: 5px;
-      transition: background 0.3s, transform 0.3s;
-      text-shadow: 0 0 5px #ffe600, 0 0 10px #ffe600;
-    }
-
-    .btn:hover {
-      background: #ff7300;
-      transform: scale(1.05);
     }
 
     /* Footer */
@@ -176,17 +183,13 @@
   <!-- About Section -->
   <section id="about">
     <h2>About</h2>
-    <p class="glow">
-      Manchester United, (AKA "Red Devils") is one of the greatest clubs of all time as they have great legends such as Cristiano Ronaldo, Wayne Rooney, Eric Cantona, and many more. The stadium of Manchester United is called "Old Trafford" which is located in Manchester, England. Old Trafford is known as "The Theatre Of Dreams". It is known as this because its the place where you follow your dreams, glory and happiness. Old Trafford or should I say The Theatre Of Dreams is where Manchester United has built their heart winning history.
-    </p>
+    <p class="glow">Manchester United is one of the greatest clubs of all time...</p>
   </section>
 
   <!-- History Section -->
   <section id="history">
     <h2>History</h2>
-    <p class="glow">
-      Manchester United has won many trophies, have many legends and have had unforgettable games. The club has won 13 Premier League titles, 3 Champions League titles, and 13 FA Cups. 
-    </p>
+    <p class="glow">The club has won 13 Premier League titles, 3 Champions League titles...</p>
   </section>
 
   <!-- Highlights Section -->
@@ -198,7 +201,7 @@
   <!-- Feedback Section -->
   <section id="feedback">
     <h2>Give me your feedback</h2>
-    <p class="glow">If you want you can give me feedback by pressing the "feedback" button below :)</p>
+    <p class="glow">If you want you can give me feedback by pressing the button below :)</p>
     <a href="https://forms.gle/a1b2c3D4eF5g6H7i8J" class="btn" target="_blank">Feedback</a>
   </section>
 
@@ -207,5 +210,20 @@
     <p>Thank you for looking at this website!</p>
   </footer>
 
+  <!-- Scroll Buttons -->
+  <button class="scroll-btn scroll-top" onclick="scrollToTop()">↑</button>
+  <button class="scroll-btn scroll-bottom" onclick="scrollToBottom()">↓</button>
+
+  <script>
+    // Scroll to the top of the page
+    function scrollToTop() {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+
+    // Scroll to the bottom of the page
+    function scrollToBottom() {
+      window.scrollTo({ top: document.body.scrollHeight, behavior: 'smooth' });
+    }
+  </script>
 </body>
 </html>
