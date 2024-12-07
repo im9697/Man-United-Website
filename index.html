@@ -20,6 +20,11 @@
       overflow-x: hidden;
     }
 
+    /* Glow Effect */
+    .glow {
+      text-shadow: 0 0 5px #ffe600, 0 0 10px #ffe600, 0 0 20px #ffe600;
+    }
+
     /* Navigation Bar */
     nav {
       position: fixed;
@@ -54,7 +59,7 @@
 
     header h1 {
       font-size: 3rem;
-      text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.3);
+      text-shadow: 0 0 10px #ffe600, 0 0 20px #ffe600, 0 0 30px #ff7300;
     }
 
     header p {
@@ -85,12 +90,14 @@
     section h2 {
       font-size: 2rem;
       margin-bottom: 20px;
+      text-shadow: 0 0 10px #ff7300, 0 0 20px #ff7300, 0 0 30px #ffe600;
     }
 
     section p {
       font-size: 1.1rem;
       max-width: 800px;
       margin: 0 auto 20px;
+      text-shadow: 0 0 5px #ffe600, 0 0 10px #ffe600;
     }
 
     /* Video Styling */
@@ -111,6 +118,7 @@
       text-decoration: none;
       border-radius: 5px;
       transition: background 0.3s, transform 0.3s;
+      text-shadow: 0 0 5px #ffe600, 0 0 10px #ffe600;
     }
 
     .btn:hover {
@@ -125,6 +133,10 @@
       text-align: center;
       font-size: 0.9rem;
       margin-top: 30px;
+    }
+
+    footer p, footer a {
+      text-shadow: 0 0 5px #ffe600, 0 0 10px #ffe600;
     }
 
     footer a {
@@ -145,35 +157,35 @@
   <!-- Navigation Bar -->
   <nav>
     <div>
-      <a href="#about">About</a>
-      <a href="#history">History</a>
-      <a href="#highlights">Videos</a>
+      <a href="#about" class="glow">About</a>
+      <a href="#history" class="glow">History</a>
+      <a href="#highlights" class="glow">Videos</a>
     </div>
     <div>
-      <a href="#feedback">Feedback</a>
+      <a href="#feedback" class="glow">Feedback</a>
     </div>
   </nav>
 
   <!-- Hero Section -->
   <header>
     <h1>Manchester United: The Best Football Club</h1>
-    <p>I mean who does not love this club</p>
+    <p class="glow">I mean who does not love this club</p>
     <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a2/Manchester_United_FC_crest.svg/1200px-Manchester_United_FC_crest.svg.png" alt="Manchester United Logo">
   </header>
 
   <!-- About Section -->
   <section id="about">
     <h2>About</h2>
-    <p>
-      Manchester United, (AKA "Red Devils") is one of the greatest clubs of all time as they have great legends such as Cristiano Ronaldo, Wayne Rooney, Eric Cantona and many more. The stadium of Manchester United is called "Old Trafford" which is located in Manchester, England. Old Trafford is known as "The Theatre Of Dreams". It is known as The Theatre Of Dreams because its the place where you follow your dreams, glory and happiness. This is where Manchester United has built their heart winning history.
+    <p class="glow">
+      Manchester United, (AKA "Red Devils") is one of the greatest clubs of all time as they have great legends such as Cristiano Ronaldo, Wayne Rooney, Eric Cantona, and many more. The stadium of Manchester United is called "Old Trafford" which is located in Manchester, England. 
     </p>
   </section>
 
   <!-- History Section -->
   <section id="history">
     <h2>History</h2>
-    <p>
-      Manchester United has won many trophies , have many legends and have had many unforgettable games. The club has won 13 Premier League titles, 3 Champions League titles and 13 FA cups. Their rivalries are Liverpool being the top rival, Manchester City and Arsenal. Manchester United has made awesome comebacks and goals mostly against these clubs. 
+    <p class="glow">
+      Manchester United has won many trophies, have many legends and have had unforgettable games. The club has won 13 Premier League titles, 3 Champions League titles, and 13 FA Cups. 
     </p>
   </section>
 
@@ -186,14 +198,13 @@
   <!-- Feedback Section -->
   <section id="feedback">
     <h2>Give me your feedback</h2>
-    <p>If you want you can give me a feedback by pressing the "feedback" button below :)</p>
+    <p class="glow">If you want you can give me feedback by pressing the "feedback" button below :)</p>
     <a href="https://forms.gle/a1b2c3D4eF5g6H7i8J" class="btn" target="_blank">Feedback</a>
   </section>
 
   <!-- Footer -->
   <footer>
     <p>Thank you for looking at this website!</p>
-    
   </footer>
 
 </body>
