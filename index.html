@@ -21,6 +21,53 @@
         position: relative;
       }
 
+      /* Text and Logo Animations */
+      @keyframes fadeIn {
+        0% {
+          opacity: 0;
+          transform: translateY(50px);
+        }
+        100% {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      @keyframes logoPop {
+        0% {
+          transform: scale(0.5);
+          opacity: 0;
+        }
+        50% {
+          transform: scale(1.1);
+          opacity: 1;
+        }
+        100% {
+          transform: scale(1);
+        }
+      }
+
+      @keyframes rollBall {
+        0% {
+          transform: translateX(-100%) rotate(0deg);
+        }
+        50% {
+          transform: translateX(50%) rotate(360deg);
+        }
+        100% {
+          transform: translateX(100%) rotate(720deg);
+        }
+      }
+
+      /* Body */
+      body {
+        font-family: Arial, sans-serif;
+        background: linear-gradient(135deg, #ff0000, #ffe600);
+        color: #fff;
+        overflow-x: hidden;
+        position: relative;
+      }
+
       /* Background Graphic */
       .graphic {
         position: absolute;
@@ -32,6 +79,7 @@
         max-width: 90%;
         max-height: 90%;
         pointer-events: none;
+        animation: rollBall 5s linear infinite; /* Soccer ball animation */
       }
 
       /* Glow Effect */
@@ -72,6 +120,7 @@
       header {
         text-align: center;
         padding: 100px 20px 50px;
+        animation: fadeIn 2s ease-out; /* Adding fade-in animation to header */
       }
 
       header h1 {
@@ -80,17 +129,20 @@
           0 0 10px #ffe600,
           0 0 20px #ffe600,
           0 0 30px #ff7300;
+        animation: fadeIn 2s ease-out; /* Animation for text */
       }
 
       header p {
         font-size: 1.2rem;
         margin: 20px 0;
+        animation: fadeIn 2s ease-out 0.5s; /* Animation for paragraph */
       }
 
       header img {
         width: 150px;
         margin-top: 20px;
         transition: transform 0.3s;
+        animation: logoPop 2s ease-out 1s; /* Animation for logo */
       }
 
       header img:hover {
@@ -114,6 +166,7 @@
           0 0 10px #ff7300,
           0 0 20px #ff7300,
           0 0 30px #ffe600;
+        animation: fadeIn 2s ease-out; /* Adding fade-in animation */
       }
 
       section p {
@@ -123,6 +176,7 @@
         text-shadow:
           0 0 5px #ffe600,
           0 0 10px #ffe600;
+        animation: fadeIn 2s ease-out 0.5s;
       }
 
       /* Video Styling */
@@ -142,9 +196,7 @@
         color: #fff;
         text-decoration: none;
         border-radius: 5px;
-        transition:
-          background 0.3s,
-          transform 0.3s;
+        transition: background 0.3s, transform 0.3s;
         text-shadow:
           0 0 5px #ffe600,
           0 0 10px #ffe600;
@@ -257,8 +309,8 @@
     <section id="feedback">
       <h2>Explore the Manchester United Official Website</h2>
       <p class="glow">
-        If you want you can go to the official website to book tickets, buy kits from the store and see the players and manager!
-    
+        If you want you can go to the official website to book tickets, buy kits from the store and see the players and manager
+        from the store!
       </p>
       <a href="https://www.manutd.com/" class="btn" target="_blank">Explore</a>
     </section>
