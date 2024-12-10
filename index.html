@@ -18,6 +18,20 @@
         background: linear-gradient(135deg, #ff0000, #ffe600);
         color: #fff;
         overflow-x: hidden;
+        position: relative;
+      }
+
+      /* Background Graphic */
+      .graphic {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        z-index: -1;
+        opacity: 0.15;
+        max-width: 90%;
+        max-height: 90%;
+        pointer-events: none;
       }
 
       /* Glow Effect */
@@ -171,6 +185,13 @@
     </style>
   </head>
   <body>
+    <!-- Background Graphic -->
+    <img
+      src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/3e/Soccer_ball_illustration.svg/1024px-Soccer_ball_illustration.svg.png"
+      alt="Soccer Ball Graphic"
+      class="graphic"
+    />
+
     <!-- Navigation Bar -->
     <nav>
       <div>
@@ -236,7 +257,7 @@
     <section id="feedback">
       <h2>Explore the Manchester United Official Website</h2>
       <p class="glow">
-        If you want you can go to the official website to book tickets and buy
+        If you want you can go to the official website to book tickets, buy kits from the store and see the players and manager!
         from the store!
       </p>
       <a href="https://www.manutd.com/" class="btn" target="_blank">Explore</a>
