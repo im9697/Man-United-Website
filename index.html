@@ -58,8 +58,6 @@
       header {
         text-align: center;
         padding: 100px 20px 50px;
-        position: relative;
-        display: inline-block;
       }
 
       header h1 {
@@ -78,48 +76,11 @@
       header img {
         width: 150px;
         margin-top: 20px;
-        transition: transform 0.3s, box-shadow 0.3s;
-        box-shadow: 0 0 10px #ffe600, 0 0 20px #ffe600, 0 0 30px #ff7300;
+        transition: transform 0.3s;
       }
 
       header img:hover {
         transform: scale(1.1);
-        box-shadow: 0 0 15px #ffe600, 0 0 30px #ffe600, 0 0 45px #ff7300;
-      }
-
-      /* Animated Glow Rings Around the Logo */
-      header::before,
-      header::after {
-        content: '';
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        width: 200px;
-        height: 200px;
-        border: 5px solid rgba(255, 230, 0, 0.8);
-        border-radius: 50%;
-        transform: translate(-50%, -50%);
-        animation: pulse 2s infinite ease-in-out;
-        z-index: -1;
-      }
-
-      header::after {
-        width: 250px;
-        height: 250px;
-        border-color: rgba(255, 115, 0, 0.8);
-        animation-delay: 1s;
-      }
-
-      /* Pulse Animation */
-      @keyframes pulse {
-        0%, 100% {
-          transform: translate(-50%, -50%) scale(0.9);
-          opacity: 1;
-        }
-        50% {
-          transform: translate(-50%, -50%) scale(1.1);
-          opacity: 0.5;
-        }
       }
 
       /* Section Styling */
