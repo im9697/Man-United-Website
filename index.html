@@ -321,3 +321,71 @@
     </footer>
   </body>
 </html>
+
+<footer>
+  <h3 style="text-align: center; text-shadow: 0 0 10px #ffe600, 0 0 20px #ffe600;">Rate my website</h3>
+  <form action="#" method="post" style="max-width: 600px; margin: 0 auto; text-align: left;">
+    <label for="rating" style="font-size: 1.2rem; text-shadow: 0 0 10px #ffe600, 0 0 20px #ffe600;">
+      How would you rate my website? (0 to 10)
+    </label><br>
+    <input 
+      type="number" 
+      id="rating" 
+      name="rating" 
+      min="1" 
+      max="10" 
+      placeholder="Enter a number between 1-10" 
+      required 
+      style="
+        width: 100%; 
+        padding: 10px; 
+        margin: 10px 0; 
+        border-radius: 5px; 
+        border: 1px solid #ffe600; 
+        background: rgba(0, 0, 0, 0.8); 
+        color: #ffe600; 
+        text-shadow: 0 0 5px #ffe600, 0 0 10px #ffe600;
+        font-size: 1rem;"
+    >
+    
+    <label for="comments" style="font-size: 1.2rem; text-shadow: 0 0 10px #ffe600, 0 0 20px #ffe600;">
+      Your Comments:
+    </label><br>
+    <textarea 
+      id="comments" 
+      name="comments" 
+      rows="4" 
+      placeholder="Let me know what you think..." 
+      required 
+      style="
+        width: 100%; 
+        padding: 10px; 
+        margin: 10px 0; 
+        border-radius: 5px; 
+        border: 1px solid #ffe600; 
+        background: rgba(0, 0, 0, 0.8); 
+        color: #ffe600; 
+        text-shadow: 0 0 5px #ffe600, 0 0 10px #ffe600;
+        font-size: 1rem;"
+    ></textarea><br>
+
+    <button 
+      type="submit" 
+      style="
+        padding: 10px 20px; 
+        background: linear-gradient(135deg, #ff7300, #ffe600); 
+        color: #fff; 
+        border: none; 
+        border-radius: 50px; 
+        cursor: pointer; 
+        font-size: 1rem; 
+        text-shadow: 0 0 5px #ffe600, 0 0 15px #ffe600, 0 0 20px #ff7300;
+        transition: transform 0.3s, box-shadow 0.3s;
+        box-shadow: 0 0 10px #ffe600, 0 0 20px #ffe600, 0 0 30px #ff7300;"
+      onmouseover="this.style.transform='scale(1.1)'; this.style.boxShadow='0 0 15px #ffe600, 0 0 30px #ff7300, 0 0 45px #ff7300';"
+      onmouseout="this.style.transform='scale(1)'; this.style.boxShadow='0 0 10px #ffe600, 0 0 20px #ffe600, 0 0 30px #ff7300';"
+    >
+      Submit Feedback
+    </button>
+  </form>
+</footer>
