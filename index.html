@@ -250,8 +250,107 @@
         <a href="#about" class="glow">About</a>
         <a href="#history" class="glow">History</a>
         <a href="#highlights" class="glow">Videos</a>
-      </div>
-      <div>
+      </div>  <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Light/Dark Mode Toggle</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            transition: background-color 0.3s, color 0.3s;
+        }
+
+        /* Light Mode */
+        .light-mode {
+            background-color: #fff;
+            color: #333;
+        }
+
+        /* Dark Mode */
+        .dark-mode {
+            background-color: #333;
+            color: #fff;
+        }
+
+        /* Button Styles */
+        .toggle-btn {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            background-color: #ff7f00; /* Orange background */
+            color: #fff;
+            border: none;
+            padding: 12px; /* Slightly increased padding */
+            border-radius: 50%;
+            font-size: 24px;
+            cursor: pointer;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s, box-shadow 0.3s, text-shadow 0.3s;
+        }
+
+        /* Rainbow Hover Effect */
+        @keyframes rainbow {
+            0% { background-color: #ff0000; }
+            14% { background-color: #ff7f00; }
+            28% { background-color: #ffff00; }
+            42% { background-color: #00ff00; }
+            57% { background-color: #0000ff; }
+            71% { background-color: #4b0082; }
+            85% { background-color: #9400d3; }
+            100% { background-color: #ff0000; }
+        }
+
+        .toggle-btn:hover {
+            animation: rainbow 2s linear infinite; /* Apply the rainbow effect */
+            transform: scale(1.1); /* Scale on hover */
+            box-shadow: 0 0 20px #ff6600; /* Glowing effect */
+            text-shadow: 0 0 10px #ff6600, 0 0 20px #ff6600; /* Glowing text */
+        }
+
+        /* Active State for Button */
+        .toggle-btn:active {
+            transform: scale(1);
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            text-shadow: none; /* Remove glow on click */
+        }
+
+        /* Icon for light/dark mode */
+        .toggle-btn img {
+            width: 28px; /* Larger icon size */
+            height: 28px;
+            object-fit: contain; /* Ensures the icon doesn't stretch */
+        }
+    </style>
+</head>
+<body class="light-mode">
+    <button class="toggle-btn" onclick="toggleMode()">
+        <img id="mode-icon" src="https://cdn3.iconfinder.com/data/icons/meteocons/512/sun-symbol-512.png" alt="Sun Icon"> <!-- Sun icon -->
+    </button>
+
+    <script>
+        // Function to toggle between light and dark mode
+        function toggleMode() {
+            const body = document.body;
+            const modeIcon = document.getElementById('mode-icon');
+            body.classList.toggle('light-mode');
+            body.classList.toggle('dark-mode');
+            if (body.classList.contains('dark-mode')) {
+                modeIcon.src = 'https://cdn3.iconfinder.com/data/icons/meteocons/512/moon-symbol-512.png'; // Replace with moon icon
+                modeIcon.alt = 'Moon Icon';
+            } else {
+                modeIcon.src = 'https://cdn3.iconfinder.com/data/icons/meteocons/512/sun-symbol-512.png'; // Sun icon
+                modeIcon.alt = 'Sun Icon';
+            }
+        }
+    </script>
+</body>
+</html>
+
+      <div>  
         <a href="#feedback" class="glow">Official Website and Feedback</a>
       </div>
     </nav>
